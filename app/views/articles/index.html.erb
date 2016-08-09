@@ -1,2 +1,13 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<h1>Articles</h1>
+
+
+<% @articles.each_with_index do |article, index| %>
+  <hr>
+  <p> Title : <%= @articles[index].title%></p>
+  <%= link_to "Details", article_path(article) %> <%= link_to "Edit", edit_article_path(article)%> <%= link_to "Delete", article_path(article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+  <hr>
+<% end %>
+
+<%= link_to "New article", new_article_path %>
