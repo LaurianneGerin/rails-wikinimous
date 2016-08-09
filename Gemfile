@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+#Redcarpet
+gem 'redcarpet'
 #Bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 # Faker
